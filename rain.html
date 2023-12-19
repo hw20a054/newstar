@@ -41,7 +41,7 @@
     });
     const arMarkerControl = new THREEx.ArMarkerControls(arToolkitContext, markerRoot, {
       type: 'pattern',
-      patternUrl: 'pattern.patt' // ❸ pattern.pattを読み込む
+      patternUrl: 'pattern-cloudstar.patt' // ❸ pattern.pattを読み込む
     });
 
     renderer.setSize(window.innerWidth, window.innerHeight);
@@ -194,21 +194,21 @@
     const starSound = new THREE.Audio(listener);
     AudioLoader.load('./SE.mp3', function (buffer) {
       starSound.setBuffer(buffer);
-      starSound.setLoop(false);
+      starSound.setLoop(true);
       starSound.setVolume(0.5);
     });
 
     const star2Sound = new THREE.Audio(listener);
     AudioLoader.load('./SE.mp3', function (buffer) {
       star2Sound.setBuffer(buffer);
-      star2Sound.setLoop(false);
+      star2Sound.setLoop(true);
       star2Sound.setVolume(0.5);
     });
 
     const star3Sound = new THREE.Audio(listener);
     AudioLoader.load('./SE.mp3', function (buffer) {
       star3Sound.setBuffer(buffer);
-      star3Sound.setLoop(false);
+      star3Sound.setLoop(true);
       star3Sound.setVolume(0.5);
     });
 
@@ -271,14 +271,14 @@
           sflg3 = true;
         }
         if (rain1.position.z > 4) {
-          sflg = false;
+
           rain1.position.z = -2;
         }
         if (rain2.position.z > 4) {
           rain2.position.z = -2;
         }
         if (rain3.position.z > 4) {
-          sflg3 = false;
+
           rain3.position.z = -2;
         }
         if (rain4.position.z > 4) {
@@ -294,7 +294,7 @@
           rain7.position.z = -2;
         }
         if (rain8.position.z > 4) {
-          sflg2 = false;
+
           rain8.position.z = -2;
         }
         if (rain9.position.z > 4) {
